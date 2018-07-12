@@ -19,16 +19,19 @@ a:visited {
 	color:#9e9e9e;
 }
 .link {
-	text-align: right;
+  text-decoration: none;
 }
 .link a {
 
+}
+.projectstext {
+  text-align: right;
   text-decoration: none;
 }
-@viewport {
-  width: device-width ;
-  zoom: 1.0 ;
-}
-@-ms-viewport {
-  width: device-width ;
-}
+.footer{
+       position: fixed;
+       text-align: center;
+       bottom: 0px;
+       width: 100%;
+       font-family: 'Open Sans', sans-serif;
+   }

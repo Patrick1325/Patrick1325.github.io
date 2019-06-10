@@ -38,3 +38,9 @@ a:visited {
        width: 100%;
        font-family: 'Open Sans', sans-serif;
    }
+.projekte {
+  position: absolute;
+  height: 10px;
+  width: 10px;
+  background: -webkit-repeating-linear-gradient(rgba(133, 5, 133, 0.685), rgb(20, 7, 192))
+}

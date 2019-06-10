@@ -1,0 +1,56 @@
+.circle {
+    border-radius: 50%;    
+}
+
+.count {
+    display: inline;
+}
+
+body {
+	padding-top: 25px;
+    font-family: 'Roboto', sans-serif;
+	background-image: linear-gradient(#212121, #131313);
+    color: #ffffff;
+    text-align: center;
+}
+.main {
+	animation-duration: 500ms
+    padding: 50px;
+}
+
+hr {
+    display: block; 
+    height: 1px;
+    border: 0; 
+    border-top: 1px solid #666
+}
+a:link {
+    color: #cacaca;
+    text-decoration: dotted;
+}
+a:visited {
+    color: #cacaca;
+    text-decoration: underline dotted
+}
+
+#projekte {
+	animation-delay: 500ms;
+}
+
+.block {
+    padding: 10px;
+    height: 40px;
+    margin: 10px auto;
+    display: inline-block;
+}
+
+#footer {
+ position:fixed;
+ bottom:0;
+ left:0;
+ margin-left: auto;
+margin-right: auto;
+right: 0;
+ opacity:0.1;
+ text-align: center;
+}

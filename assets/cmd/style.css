@@ -1,0 +1,18 @@
+body {
+    background: #000000;
+    color: #ffffff;
+    font-family: monospace;
+    padding: 3px;
+    font-size: 15px;
+    line-height: 15px;
+}
+#terminal {
+    position: absolute;
+    top: 13px;
+}
+#pointer {
+    display: none;
+    position: absolute;
+    top: calc(13px * 1);
+    left: 11px;
+}

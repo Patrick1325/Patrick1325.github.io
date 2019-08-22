@@ -1,3 +1,8 @@
+@keyframes in {
+    from { opacity: 0 }
+    to { opacity: 1 }
+}
+
 .circle {
     border-radius: 50%;    
 }
@@ -9,13 +14,10 @@
 body {
 	padding-top: 25px;
     font-family: 'Roboto', sans-serif;
-	background-image: linear-gradient(#212121, #131313);
-    color: #ffffff;
+    color: #eeeeee;
+    background: black;
     text-align: center;
-}
-.main {
-	animation-duration: 500ms
-    padding: 50px;
+    animation: in 1s 
 }
 
 hr {
@@ -31,10 +33,6 @@ a:link {
 a:visited {
     color: #cacaca;
     text-decoration: underline dotted
-}
-
-#projekte {
-	animation-delay: 500ms;
 }
 
 .block {
@@ -53,4 +51,13 @@ margin-right: auto;
 right: 0;
  opacity:0.1;
  text-align: center;
+}
+#bg_vid {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    opacity: 0.4;
 }

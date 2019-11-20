@@ -1,6 +1,10 @@
 @keyframes in {
-    from { opacity: 0 }
-    to { opacity: 1 }
+    from { opacity: 0; transform: rotate(-180deg); }
+    to { opacity: 1; transform: rotate(0deg); }
+}
+@keyframes stuff {
+    from { opacity: 0; transform: translateY(-500px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
 .circle {
@@ -17,7 +21,6 @@ body {
     color: #eeeeee;
     background: black;
     text-align: center;
-    animation: in 1s 
 }
 
 hr {
@@ -60,4 +63,37 @@ right: 0;
     left: 0;
     z-index: -1;
     opacity: 0.4;
+}
+.media {
+    transform: translateY(1px);
+    transition: 250ms transform;
+}
+.media:hover {
+    transform: translateY(5px) scale(1.05) rotate(-5deg);
+    transition: 250ms transform;
+}
+.patrick {
+    transform: translateY(0px);
+    transition: 250ms transform;
+}
+.patrick:active {
+    transform: rotate(180deg);
+    transition: 250ms transform;
+}
+.patrick:active:before {
+    content: "hi";
+}
+#main {
+    animation: in 1s;
+}
+#stuff {
+    animation: stuff 1.25s;
+}
+.block {
+    transform: scale(1);
+    transition: 250ms transform;
+}
+.block:hover {
+    transform: scale(1.1);
+    transition: 250ms transform;
 }

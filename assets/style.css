@@ -6,6 +6,10 @@
     from { opacity: 0; transform: translateY(-500px); }
     to { opacity: 1; transform: translateY(0); }
 }
+@keyframes secret {
+    from { opacity: 1; transform: translateY(0); }
+    to { opacity: 0; transform: translateY(-500px)}
+}
 
 .circle {
     border-radius: 50%;    
@@ -85,9 +89,13 @@ right: 0;
 }
 #main {
     animation: in 1s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
 }
 #stuff {
     animation: stuff 1.25s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
 }
 .block {
     transform: scale(1);
@@ -96,4 +104,9 @@ right: 0;
 .block:hover {
     transform: scale(1.1);
     transition: 250ms transform;
+}
+#secret {
+    display: none;
+    transition: 500ms transform;
+    transform: translateX(-8000px) translateY(-200px);
 }

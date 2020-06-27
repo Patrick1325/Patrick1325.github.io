@@ -1,5 +1,8 @@
 var get = q => document.querySelector(q); 
 
+// particle background
+particlesJS.load('bg_vid', 'assets/json/particles.json');
+
 // schlechter code von mir
 var c = "";
 var co = [
@@ -31,3 +34,4 @@ addEventListener("keydown", e => {
     }
   } else c = "";
 });
+

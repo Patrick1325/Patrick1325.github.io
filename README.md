@@ -1,2 +1,2 @@
-# zImPatrick.github.io // Patrick's Website
-Eine normale Website.
+# Meine Website
+Es ist einfach meine Website. Ich hoste sie hier.. weil ich eigentlich nicht mehr brauche.

@@ -1,116 +1,130 @@
 @keyframes in {
-    from { opacity: 0; transform: rotate(-180deg); }
-    to { opacity: 1; transform: rotate(0deg); }
+  from {
+    opacity: 0;
+    transform: rotate(-180deg);
+  }
+  to {
+    opacity: 1;
+    transform: rotate(0deg);
+  }
 }
 @keyframes stuff {
-    from { opacity: 0; transform: translateY(-500px); }
-    to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(-500px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 @keyframes secret {
-    from { opacity: 1; transform: translateY(0); }
-    to { opacity: 0; transform: translateY(-500px)}
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-500px);
+  }
 }
 
 .circle {
-    border-radius: 50%;    
+  border-radius: 50%;
 }
 
 .count {
-    display: inline;
+  display: inline;
 }
 
 body {
-	padding-top: 25px;
-    font-family: 'Roboto', sans-serif;
-    color: #eeeeee;
-    background: rgb(214,22,135);
-    background: linear-gradient(90deg, rgba(214,22,135,1) 0%, rgba(155,14,199,1) 100%);
-    text-align: center;
-}
-
-hr {
-    display: block; 
-    height: 1px;
-    border: 0; 
-    border-top: 1px solid #666
+  padding-top: 25px;
+  font-family: "Roboto", sans-serif;
+  color: #eeeeee;
+  background: linear-gradient(
+    90deg,
+    rgb(144, 22, 214) 0%,
+    rgb(155, 14, 199) 100%
+  );
+  text-align: center;
 }
 a:link {
-    color: #cacaca;
-    text-decoration: dotted;
+  color: #cacaca;
+  text-decoration: dotted;
 }
 a:visited {
-    color: #cacaca;
-    text-decoration: underline dotted
+  color: #cacaca;
+  text-decoration: underline dotted;
 }
 
 .block {
-    padding: 10px;
-    height: 40px;
-    margin: 10px auto;
-    display: inline-block;
+  padding: 10px;
+  height: 40px;
+  margin: 10px auto;
+  display: inline-block;
 }
 
 #footer {
- position:fixed;
- bottom:0;
- left:0;
- margin-left: auto;
-margin-right: auto;
-right: 0;
- opacity:0.1;
- text-align: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  margin-left: auto;
+  margin-right: auto;
+  right: 0;
+  opacity: 0.1;
+  text-align: center;
 }
 #bg_vid {
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    opacity: 0.9;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  opacity: 0.9;
 }
 .media {
-    transform: translateY(1px);
-    transition: 250ms transform;
-    height: 48px;
-    width: 48px;
+  transform: translateY(1px);
+  transition: 250ms transform;
+  height: 48px;
+  width: 48px;
 }
 .media:hover {
-    transform: translateY(5px) scale(1.05) rotate(-5deg);
-    transition: 250ms transform;
+  transform: translateY(5px) scale(1.05) rotate(-5deg);
+  transition: 250ms transform;
 }
 .patrick {
-    transform: translateY(0px);
-    transition: 250ms transform;
-    border: 4px solid white;
+  transform: translateY(0px);
+  transition: 250ms transform;
+  border: 4px solid white;
 }
 .patrick:active {
-    transform: rotate(180deg);
-    transition: 250ms transform;
+  transform: rotate(180deg);
+  transition: 250ms transform;
 }
 .patrick:active:before {
-    content: "hi";
+  content: "hi";
 }
 #main {
-    animation: in 1s;
-    -webkit-animation-fill-mode: forwards;
-    animation-fill-mode: forwards;
+  animation: in 1s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
 }
 #stuff {
-    animation: stuff 1.25s;
-    -webkit-animation-fill-mode: forwards;
-    animation-fill-mode: forwards;
+  animation: stuff 1.25s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
 }
 .block {
-    transform: scale(1);
-    transition: 250ms transform;
+  transform: scale(1);
+  transition: 250ms transform;
 }
 .block:hover {
-    transform: scale(1.1);
-    transition: 250ms transform;
+  transform: scale(1.1);
+  transition: 250ms transform;
 }
 #secret {
-    display: none;
-    transition: 500ms transform;
-    transform: translateX(-8000px) translateY(-200px);
+  display: none;
+  transition: 500ms transform;
+  transform: translateX(-8000px) translateY(-200px);
 }

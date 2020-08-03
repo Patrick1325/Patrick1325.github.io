@@ -48,7 +48,7 @@
     "line_linked": {
       "enable": true,
       "distance": 150,
-      "color": "#ffffff",
+      "color": "#AAA",
       "opacity": 0.4,
       "width": 1
     },
@@ -68,7 +68,7 @@
     }
   },
   "interactivity": {
-    "detect_on": "canvas",
+    "detect_on": "window",
     "events": {
       "onhover": {
         "enable": true,
@@ -89,7 +89,7 @@
       },
       "bubble": {
         "distance": 400,
-        "size": 7.992007992007992,
+        "size": 3.992007992007992,
         "duration": 2,
         "opacity": 8,
         "speed": 3

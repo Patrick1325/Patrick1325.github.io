@@ -3,7 +3,7 @@ var get = q => document.querySelector(q);
 // particle background
 particlesJS.load('bg_vid', 'assets/json/particles.json');
 
-// schlechter code von mir
+// schlechter code von mir (was das für müll code)
 var c = "";
 var co = [
   "arrowup",
@@ -29,8 +29,11 @@ addEventListener("keydown", e => {
       main.style.animationPlayState = "running";
       stuff.style.animationName = "secret";
       main.style.animationName = "secret";
+
       get("#secret").style.transform = "translateX(0px) translateY(-200px)"
       get("#secret").style.display = "block";
+
+      get("#sIframe").src = "https://www.youtube-nocookie.com/embed/FtE6SV_1wu4"
     }
   } else c = "";
 });

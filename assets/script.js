@@ -52,7 +52,7 @@ var languageIcon = {
   var stuffRef = get("#stuff");
 
   var data = await fetch(
-    "https://api.github.com/users/zImPatrick/repos"
+    "https://api.github.com/users/zImPatrick/repos?"+Math.random()
   ).then((resp) => resp.json());
   console.debug(data);
 

@@ -50,7 +50,13 @@
 		<br>
         </div>
         <div id="secret">
-            <iframe id="sIframe" width="100%" height="92%" frameborder="0" allowfullscreen></iframe>
+            <button id="autoGame">Auto on/off</button>
+            <label>Speed</label>
+            <input type="range" min="0.1" max="1" value="0.5" id="speedGame" step="0.1">
+            <input type="number" disabled id="speedGameValue">
+            <br>
+            <canvas id="game" width="500px" height="500px"></canvas><br>
+            ← ↑ → ↓ zum Bewegen
         </div>
     </body>
 </html>

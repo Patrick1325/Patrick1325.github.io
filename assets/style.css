@@ -128,3 +128,10 @@ a:visited {
   transition: 500ms transform;
   transform: translateX(-8000px) translateY(-200px);
 }
+
+#game {
+  border: 4px solid black;
+}
+#speedGameValue {
+  width: 3rem;
+}

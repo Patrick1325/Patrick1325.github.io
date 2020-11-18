@@ -34,8 +34,14 @@ addEventListener("keydown", (e) => {
       get("#secret").style.transform = "translateX(0px) translateY(-200px)";
       get("#secret").style.display = "block";
 
-      get("#sIframe").src =
-        "https://www.youtube-nocookie.com/embed/FtE6SV_1wu4";
+      // secret game
+
+      (async () => {
+        var script = document.createElement('script');
+        script.src = "/assets/g.js?"+Math.random();
+
+        document.head.appendChild(script);
+      })();
     }
   } else c = "";
 });

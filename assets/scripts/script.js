@@ -1,5 +1,8 @@
 var get = (q) => document.querySelector(q);
 
+console.log('%cStop! You have violated the Law!', 'font-size: 24px; color:#036bfc;');
+console.log('%cPay the court a fine or serve your sentance. (jk)', 'font-size: 18px; color:#036bfc;');
+
 // particle background
 particlesJS.load("bg_vid", "assets/json/particles.json");
 
@@ -21,7 +24,6 @@ addEventListener("keydown", (e) => {
   if (e.key.toLowerCase() == co[c.length]) {
     c = c + 1;
     if (c.length == 10) {
-      console.log("should do something");
       var stuff = get("#stuff"),
         main = get("#main");
       stuff.style.webkitAnimationPlayState = "running";
@@ -38,7 +40,7 @@ addEventListener("keydown", (e) => {
 
       (async () => {
         var script = document.createElement('script');
-        script.src = "/assets/g.js?"+Math.random();
+        script.src = "/assets/scripts/g.js?"+Math.random();
 
         document.head.appendChild(script);
       })();
@@ -58,9 +60,8 @@ var languageIcon = {
   var stuffRef = get("#stuff");
 
   var data = await fetch(
-    "https://api.github.com/users/zImPatrick/repos?"+Math.random()
+    "https://api.github.com/users/zImPatrick/repos?"+Math.random() // no caching 4 u
   ).then((resp) => resp.json());
-  console.debug(data);
 
   var reposToShow = [];
   var forbiddenNumbers = [];
@@ -80,7 +81,7 @@ var languageIcon = {
     <b>${rep.name}</b>
 </a><br>
 ${rep.description}<br>
-${languageIcon[rep.language.toLowerCase()]} ${rep.language}
+${languageIcon[rep.language.toLowerCase()] || "❓"} ${rep.language}
 </div>`;
   });
 })();

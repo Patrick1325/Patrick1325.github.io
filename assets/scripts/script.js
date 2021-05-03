@@ -60,8 +60,10 @@ var languageIcon = {
   var stuffRef = get("#stuff");
 
   var data = await fetch(
-    "https://api.github.com/users/zImPatrick/repos?"+Math.random() // no caching 4 u
-  ).then((resp) => resp.json());
+    "https://api.github.com/users/zImPatrick/repos",
+  {
+    cache: "no-cache"
+  }).then((resp) => resp.json());
 
   var reposToShow = [];
   var forbiddenNumbers = [];

@@ -102,22 +102,24 @@ a:visited {
   transform: rotate(180deg);
   transition: 250ms transform;
 }
-.patrick:active:before {
-  content: "hi";
-}
 #main {
   animation: in 1s;
   -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
+  backdrop-filter: blur(4px);
+  z-index: 5;
 }
 #stuff {
   animation: stuff 1.25s;
   -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
+  backdrop-filter: blur(4px);
+  z-index: 1;
 }
 .block {
   transform: scale(1);
   transition: 250ms transform;
+  max-width: 15rem;
 }
 .block:hover {
   transform: scale(1.1);

@@ -4,7 +4,7 @@ console.log('%cStop! You have violated the Law!', 'font-size: 24px; color:#036bf
 console.log('%cPay the court a fine or serve your sentance. (jk)', 'font-size: 18px; color:#036bfc;');
 
 // particle background
-particlesJS.load("bg_vid", "assets/json/particles.json");
+particlesJS.load("bg", "assets/json/particles.json");
 
 // repos
 var languageIcon = {

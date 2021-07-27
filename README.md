@@ -1,2 +1,2 @@
 # zImPatrick.gq
-Das Zuhause eines Idioten
+Das Zuhause eines Idioten.

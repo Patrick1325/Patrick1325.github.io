@@ -1,0 +1,14 @@
+# einfach kopiert von https://jacobtomlinson.dev/posts/2020/testing-static-sites-with-lighthouse-ci-and-github-actions/
+
+name: Lighthouse
+on: [push, pull_request]
+jobs:
+  CI:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Run Lighthouse CI
+        uses: treosh/lighthouse-ci-action@v8
+        with:
+          configPath: "./lighthouserc.json"
+          uploadArtifacts: true

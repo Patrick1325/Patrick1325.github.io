@@ -1,7 +1,7 @@
-var get = (q) => document.querySelector(q);
+var get = q => document.querySelector(q);
 
 console.log('%cStop! You have violated the Law!', 'font-size: 24px; color:#036bfc;');
-console.log('%cPay the court a fine or serve your sentance. (jk)', 'font-size: 18px; color:#036bfc;');
+console.log('%cPay the court a fine or serve your sentance.', 'font-size: 18px; color:#036bfc;');
 
 // particle background
 particlesJS.load("bg", "assets/json/particles.json");

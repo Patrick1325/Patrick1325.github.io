@@ -121,6 +121,7 @@ section {
   }
   to {
     opacity: 1;
+    filter: blur(0px);
   }
 }
 @keyframes stuff {

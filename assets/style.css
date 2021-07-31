@@ -5,8 +5,8 @@
 body {
   padding-top: 25px;
   /* font-family: "Roboto", sans-serif; */
-  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  color: #eeeeee;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #eee;
   background: linear-gradient(
     90deg,
     rgb(144, 22, 214) 0%,
@@ -15,10 +15,12 @@ body {
   text-align: center;
   overflow-x: hidden;
 }
+
 a:link {
   color: #fff;
   text-decoration: dotted;
 }
+
 a:visited {
   color: #fff;
   text-decoration: underline dotted;
@@ -35,9 +37,6 @@ a:visited {
   filter: blur(4px);
 }
 
-
-
-
 /* //////////// */
 /* / SECTIONS / */
 /* //////////// */
@@ -51,6 +50,7 @@ section {
   animation: in 1s;
   animation-fill-mode: forwards;
 }
+
 #stuff {
   animation: stuff 1s;
   animation-fill-mode: forwards;
@@ -67,11 +67,11 @@ section {
   margin-right: 0.25rem;
   text-align: left;
   display: inline-block;
-
   transition: 250ms transform;
 }
+
 .patrick:hover {
-  transform: rotate(-30deg)
+  transform: rotate(-30deg);
 }
 
 #socials {
@@ -97,6 +97,7 @@ section {
 /* ///////// */
 /* / STUFF / */
 /* ///////// */
+
 .block {
   padding: 10px;
   height: 40px;
@@ -106,6 +107,7 @@ section {
   transition: 250ms transform;
   max-width: 15rem;
 }
+
 .block:hover {
   transform: scale(1.1);
   transition: 250ms transform;
@@ -114,23 +116,27 @@ section {
 /* ////////////// */
 /* / ANIMATIONS / */
 /* ///////////// */
+
 @keyframes in {
   from {
     opacity: 0;
     transform: translateX(-300px);
     filter: blur(5px);
   }
+
   to {
     opacity: 1;
-    filter: blur(0px);
+    filter: blur(0);
   }
 }
+
 @keyframes stuff {
   from {
     opacity: 0;
     transform: translateX(300px);
     filter: blur(5px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);

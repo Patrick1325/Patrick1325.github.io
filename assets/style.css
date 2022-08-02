@@ -65,6 +65,15 @@ body {
 	text-align: center;
 }
 
+.card-middle {
+	justify-content: center;
+}
+
+.card-bottom {
+	flex-wrap: wrap;
+	justify-content: flex-end;
+}
+
 .title {
 	font-size: 2.5rem;
 	font-weight: 500;
@@ -75,7 +84,7 @@ p {
 }
 
 .socials { opacity: 0; animation: entryBottom 0.5s ease-in-out 1.25s forwards; }
-
+.scrollDownMain { opacity: 0; animation: entryBottom 0.5s ease-in-out 1.25s forwards; }
 .icon {
 	width: 2rem;
 	height: 2rem;
@@ -114,4 +123,36 @@ p {
 		width: 3.5rem;
 		height: 3.5rem;
 	}
+
+	.projectsList {
+		flex-flow: column wrap;
+	}
+}
+
+.projectsList {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
+.projectImage {
+	vertical-align: middle;
+	height: 7rem;
+}
+
+.projectsList > div {
+	padding-top: 3rem;
+	padding-right: 2rem;
+	padding-left: 2rem;
+	max-width: 35rem;
+}
+
+.subtitle {
+	font-size: 2rem;
+	font-weight: 500;
+}
+
+a:any-link {
+	color: #60a3da;
+	text-decoration: none;
 }

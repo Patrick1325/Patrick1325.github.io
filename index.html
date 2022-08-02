@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <!--
   Icons sind von Tabler Icons (leicht modifiziert aufgrund der Farben)
   inspiriert von einem Freund
@@ -14,6 +15,9 @@
     <meta name="og:title" content="zimpatrick">
     <meta name="og:description" content="manchmal funktioniert etwas">
     <meta name="theme-color" content="#2f3136">
+    
+    <script src="/assets/script.js" defer></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   </head>
   <body>
 	  <div class="background"></div>
@@ -21,9 +25,10 @@
 		  <div class="card entrycard">
         <span id="hi">hi, ich bin&nbsp;</span>
         <span id="hi-patrick">patrick</span>
+        <span id="warning"></span>
       </div>
-      <div class="card">
-        <img src="assets/icons/settings.svg" class="cog">
+      <div class="card" id="home">
+        <img src="/assets/icons/settings.svg" class="cog">
         <p class="title">
           manchmal funktioniert etwas
         </p>
@@ -32,6 +37,26 @@
           <a class="icon github" href="//github.com/zImPatrick" alt="GitHub"></a>
           <a class="icon twitter" href="//twitter.com/zImPatrick_" alt="Twitter"></a>
         </div>
+        <img src="/assets/icons/chevron-down.svg" class="scrollDownMain">
+      </div>
+      <div class="card" id="projekte">
+        <p class="title">projekte</p>
+        <p>Das meiste meiner Arbeit ist privat, deshalb kann ich hier nicht viel zeigen</p>
+        <div class="projectsList">
+          <div>
+            <div>
+              <img src="assets/projects/spotify_overlay.png" class="projectImage">
+            </div>
+            <p class="subtitle"><a href="https://github.com/zImPatrick/spotify-overlay">Spotify Overlay</a></p>
+            <p>Das Spotify-Overlay zeigt dir immer an, was du gerade auf Spotify hörst</p>
+          </div>
+          <div>
+            <div>
+              <img src="assets/projects/wordunlocker.png" class="projectImage">
+            </div>
+            <p class="subtitle"><a href="https://werr.zimpatrick.gq/">Word Password Remover</a></p>
+            <p>Entfernt den Schreibschutz von einem Word-Dokument (verwendet von DeepL, etc) ohne Kennwort</p>
+          </div>
       </div>
 	  </div>
   </body>

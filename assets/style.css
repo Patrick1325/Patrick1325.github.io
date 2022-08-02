@@ -1,20 +1,4 @@
-:root {
-  --theme-color: #4690cc;
-}
-
-html,
-body {
-  padding: 0;
-  margin: 0;
-}
-body {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  color: #fff;
-  font-size: 1.5rem;
-  text-shadow: 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black;
-  background: rgb(44, 44, 44);
-}
-
+/* #region Animationen */
 @keyframes entryTop {
   from {
     opacity: 0;
@@ -56,27 +40,34 @@ body {
     transform: rotate(360deg);
   }
 }
+/* #endregion */
 
-.entrycard {
-  position: fixed;
-  font-size: 2.5rem;
-  animation: disappear 0.5s ease-in-out 1s 1 normal forwards;
-  flex-direction: row !important;
-
-  z-index: 10;
+/* #region Base */
+:root {
+  --theme-color: #4690cc;
 }
 
-.entrycard > #hi {
-  opacity: 0;
-  animation: entryTop 0.5s ease-in-out 0.05s 1 normal forwards;
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #fff;
+  font-size: 1.5rem;
+  text-shadow: 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black;
+  background: rgb(44, 44, 44);
 }
 
-.entrycard > #hi-patrick {
-  opacity: 0;
-  animation: entryBottom 0.5s ease-in-out 0.4s 1 normal forwards;
-  border-bottom: 1px solid white;
+a:any-link {
+  color: #60a3da;
+  text-decoration: none;
 }
 
+/* #endregion */
+
+/* #region Cards */
 .card {
   display: flex;
   justify-content: center;
@@ -97,23 +88,50 @@ body {
   justify-content: flex-end;
 }
 
+.entrycard {
+  position: fixed;
+  font-size: 2.5rem;
+  animation: disappear 0.5s ease-in-out 1s 1 normal forwards;
+  flex-direction: row !important;
+
+  z-index: 10;
+}
+
+.entrycard > #hi {
+  opacity: 0;
+  animation: entryTop 0.5s ease-in-out 0.05s 1 normal forwards;
+}
+
+.entrycard > #hi-patrick {
+  opacity: 0;
+  animation: entryBottom 0.5s ease-in-out 0.4s 1 normal forwards;
+  border-bottom: 1px solid white;
+}
+/* #endregion */
+
+/* #region Helper */
 .title {
   font-size: 2.5rem;
+  font-weight: 500;
+}
+
+.subtitle {
+  font-size: 2rem;
   font-weight: 500;
 }
 
 p {
   margin: 0.5rem;
 }
+/* #endregion */
 
-.socials {
-  opacity: 0;
-  animation: entryBottom 0.5s ease-in-out 1.25s forwards;
-}
+/* #region Main Card */
+.socials,
 .scrollDownMain {
   opacity: 0;
   animation: entryBottom 0.5s ease-in-out 1.25s forwards;
 }
+
 .icon {
   width: 2rem;
   height: 2rem;
@@ -146,18 +164,9 @@ p {
   vertical-align: middle;
   width: 6rem;
 }
+/* #endregion */
 
-@media (max-width: 480px) {
-  .icon {
-    width: 3.5rem;
-    height: 3.5rem;
-  }
-
-  .projectsList {
-    flex-flow: column wrap;
-  }
-}
-
+/* #region Projects List */
 .projectsList {
   display: flex;
   flex-direction: row;
@@ -175,13 +184,17 @@ p {
   padding-left: 2rem;
   max-width: 35rem;
 }
+/* #endregion */
 
-.subtitle {
-  font-size: 2rem;
-  font-weight: 500;
-}
+/* #region Mobile */
+@media (max-width: 480px) {
+  .icon {
+    width: 3.5rem;
+    height: 3.5rem;
+  }
 
-a:any-link {
-  color: #60a3da;
-  text-decoration: none;
+  .projectsList {
+    flex-flow: column wrap;
+  }
 }
+/* #endregion */

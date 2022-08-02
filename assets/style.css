@@ -9,41 +9,109 @@ html, body {
 body {
 	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 	color: #fff;
+	font-size: 1.5rem;
 	text-shadow: 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black;
-	background-image: url(/assets/background.jpg?a);
-	background-size: cover;
+	background: rgb(44, 44, 44);
 }
 
-.container {
-	top: 0;
-	max-width: 960px;
-	margin: auto;
-	backdrop-filter: blur(14px);
-	height: 100vh;
-	padding: 5px;
-	box-sizing: border-box;
-	/* background: #fff; */
+@keyframes entryTop {
+	from { opacity: 0; transform: translateY(-10vh)}
+	to { opacity: 1; transform: translateY(0)}
 }
 
-.underlined {
-	border-bottom: 2px solid var(--theme-color);
+@keyframes entryBottom {
+	from { opacity: 0; transform: translateY(10vh)}
+	to { opacity: 1; transform: translateY(0)}
 }
 
-.background {
+@keyframes disappear {
+	from { opacity: 1; transform: translateY(0)}
+	to { opacity: 0; transform: translateY(-100vh)}
+}
+
+@keyframes spin {
+	from { transform: rotate(0) }
+	to { transform: rotate(360deg) }
+}
+
+.entrycard {
 	position: fixed;
+	font-size: 2.5rem;
+	animation: disappear 0.5s ease-in-out 1s 1 normal forwards;
+	flex-direction: row !important;
+
+	z-index: 10;
 }
 
-a:any-link {
-	color: #fff;
-	text-decoration: none;
+.entrycard > #hi {
+	opacity: 0;
+	animation: entryTop 0.5s ease-in-out 0.05s 1 normal forwards;
 }
 
-.smicon {
+.entrycard > #hi-patrick {
+	opacity: 0;
+	animation: entryBottom 0.5s ease-in-out 0.4s 1 normal forwards;
+	border-bottom: 1px solid white;
+}
+
+.card {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	width: 100%;
+	background-color: rgb(44, 44, 44);
+	flex-direction: column;
+	text-align: center;
+}
+
+.title {
+	font-size: 2.5rem;
+	font-weight: 500;
+}
+
+p {
+	margin: 0.5rem;
+}
+
+.socials { opacity: 0; animation: entryBottom 0.5s ease-in-out 1.25s forwards; }
+
+.icon {
+	width: 2rem;
+	height: 2rem;
+	background-size: cover;
+	display: inline-block;
+	transition: transform 250ms !important;
+}
+
+.icon:hover {
+	transform: translateY(-5px) rotate(5deg) !important;
+}
+
+.discord {
+	width: 2rem;
+	height: 2rem;
+	background-size: cover;
+	background-image: url(/assets/icons/brand-discord.svg);
+}
+
+.github {
+	background-image: url(/assets/icons/brand-github.svg);
+}
+
+.twitter {
+	background-image: url(/assets/icons/brand-twitter.svg);
+}
+
+.cog {
+	animation: spin 1s linear infinite;
 	vertical-align: middle;
-	width: 24px;
-	height: 24px;
+	width: 6rem;
 }
 
-.smlink {
-	display: block;
+@media (max-width: 480px) {
+    .icon {
+		width: 3.5rem;
+		height: 3.5rem;
+	}
 }

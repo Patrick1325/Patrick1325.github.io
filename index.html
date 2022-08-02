@@ -1,51 +1,34 @@
+<!--
+  Icons sind von Tabler Icons (leicht modifiziert aufgrund der Farben)
+  inspiriert von einem Freund
+-->
 <html lang="de">
   <head>
+    <title>zimpatrick.gq</title>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<link rel="stylesheet" href="/assets/style.css">
+	  <link rel="stylesheet" href="/assets/style.css">
+    <link rel="icon" href="/assets/favicon.svg">
   </head>
   <body>
 	  <div class="background"></div>
 	  <div class="container">
-		  <h1 class="underlined">hi, ich bin patrick</h1>
-
-      <!-- social media links -->
-      <strong>
-        <a href="https://github.com/zImPatrick" class="smlink">
-          <img src="assets/icons/brand-github.svg?_" class="smicon">
-          github
-        </a>
-        <a href="https://twitter.com/zImPatrick_" class="smlink">
-          <img src="assets/icons/brand-twitter.svg?" class="smicon">
-          twitter
-        </a>
-        <a href="https://discord.com/users/137228543045140480" class="smlink">
-          <img src="assets/icons/brand-discord.svg?_" class="smicon">
-          discord
-        </a>
-      </strong>
-
-
-      <!-- inhalt -->
-      <p>Das meiste meiner Arbeit ist trotzdem nicht open source, also findet man dies nicht auf GitHub.</p>
-
-      <h3 class="underlined">Skills</h3>
-      
-      <p>
-        <strong>
-          <img src="assets/icons/brand-javascript.svg" class="smicon">
-          JavaScript
-        </strong>
-        Aus JavaScript besteht der Großteil meiner Projekte. TypeScript, JavaScript, React sind meine Stärken im Thema Frontend-, sowie Backendentwicklung.
-      </p>
-      <p>
-        <strong>
-          <img src="assets/icons/brand-python.svg?_" class="smicon">
-          Python
-        </strong>
-        Python verwende ich meistens für kleine Skripts, jedoch habe ich trotzdem bedeutende Erfahrung gesammelt und auch größere Projekte angetreten.
-      </p>
+		  <div class="card entrycard">
+        <span id="hi">hi, ich bin&nbsp;</span>
+        <span id="hi-patrick">patrick</span>
+      </div>
+      <div class="card">
+        <img src="assets/icons/settings.svg" class="cog">
+        <p class="title">
+          manchmal funktioniert etwas
+        </p>
+        <div class="socials">
+          <a class="icon discord" href="//discord.com/users/137228543045140480" alt="Discord"></a>
+          <a class="icon github" href="//github.com/zImPatrick" alt="GitHub"></a>
+          <a class="icon twitter" href="//twitter.com/zImPatrick_" alt="Twitter"></a>
+        </div>
+      </div>
 	  </div>
   </body>
 </html>

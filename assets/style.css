@@ -40,6 +40,16 @@
     transform: rotate(360deg);
   }
 }
+
+@keyframes expandUnderline {
+  from {
+    background-size: 0% 1px;
+  }
+  to {
+    background-size: 100% 1px;
+  }
+}
+
 /* #endregion */
 
 /* #region Base */
@@ -66,15 +76,6 @@ a:any-link {
 }
 
 /* Scrollbar */
-/* ::-webkit-scrollbar {
-  background-color: transparent;
-  width: 4px;
-  padding: 1px;
-}
-
-::-webkit-scrollbar-track {
-  background-color: transparent
-} */
 ::-webkit-scrollbar {
   width: 15px;
 }
@@ -124,9 +125,14 @@ a:any-link {
 }
 
 .entrycard > #hi-patrick {
+  animation: entryBottom 0.5s ease-in-out 0.4s 1 normal forwards, expandUnderline 0.3s ease-in-out 0.7s 1 normal forwards;
   opacity: 0;
-  animation: entryBottom 0.5s ease-in-out 0.4s 1 normal forwards;
-  border-bottom: 1px solid white;
+
+  /* Für die Underline */
+  background-image: linear-gradient(white, white);
+  background-size: 0% 3px;
+  background-repeat: no-repeat;
+  background-position: 0 100%;
 }
 /* #endregion */
 
@@ -196,6 +202,14 @@ p {
   display: flex;
   flex-direction: row;
   justify-content: center;
+}
+
+#projekte  {
+  transform: translateY(0);
+}
+
+#projekte.anim > * {
+  animation: entryBottom 1.25s;
 }
 
 .projectImage {

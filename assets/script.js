@@ -12,7 +12,6 @@ document.addEventListener(
     ev.preventDefault();
     ev.stopPropagation();
     if (lastScroll + 350 > Date.now()) return;
-    lastScroll = Date.now();
 
     let isUp = ev.deltaY < 0;
     let newIndex = isUp ? -1 : 1;
@@ -22,9 +21,14 @@ document.addEventListener(
       newIndex = sections.length - 1;
     }
 
+    if (newIndex === currentCardIdx) return;
+    lastScroll = Date.now();
+
     let section = sections[newIndex];
     window.history.pushState(null, null, "#" + section.id);
     currentCardIdx = newIndex;
+
+    if (!section.classList.contains("anim")) section.classList.add("anim");
 
     section.scrollIntoView({
       behavior: "smooth",

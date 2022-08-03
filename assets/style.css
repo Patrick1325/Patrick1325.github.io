@@ -180,6 +180,10 @@ p {
   background-image: url(/assets/icons/brand-twitter.svg);
 }
 
+.mail {
+  background-image: url(/assets/icons/mail.svg);
+}
+
 .cog {
   animation: spin 1s linear infinite;
   vertical-align: middle;

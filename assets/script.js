@@ -1,5 +1,8 @@
 //#region Scroll-Feature
-let sections = ["home", "projekte"].map((e) => document.querySelector(`#${e}`));
+const sections = ["home", "projekte", "music"].map((e) => document.querySelector(`#${e}`));
+
+const onShowHandlers = {}
+
 
 let currentCardIdx = window.location.hash
   ? sections.indexOf(document.querySelector(window.location.hash)) || 0
@@ -14,13 +17,12 @@ document.addEventListener(
     if (lastScroll + 350 > Date.now()) return;
 
     let isUp = ev.deltaY < 0;
-    let newIndex = isUp ? -1 : 1;
+    let newIndex = currentCardIdx + (isUp ? -1 : 1);
     if (newIndex < 0) {
       newIndex = 0;
     } else if (newIndex > sections.length - 1) {
       newIndex = sections.length - 1;
     }
-
     if (newIndex === currentCardIdx) return;
     lastScroll = Date.now();
 
@@ -28,6 +30,7 @@ document.addEventListener(
     window.history.pushState(null, null, "#" + section.id);
     currentCardIdx = newIndex;
 
+    onShowHandlers?.[section.id]?.(!section.classList.contains("anim"));
     if (!section.classList.contains("anim")) section.classList.add("anim");
 
     section.scrollIntoView({
@@ -73,3 +76,32 @@ document.querySelector('.icon.discord').addEventListener('click', e => {
   window.location = 'discord://-/users/137228543045140480';
   e.preventDefault();
 });
+
+onShowHandlers.music = async (firstTime) => {
+  if (!firstTime) return;
+
+  let data = await fetch("https://zimpatrick.gq/_papi/lastfm")
+    .then(r => r.json());
+
+  let last5Tracks = data.recenttracks.track.splice(0,5);
+
+  document.querySelector('#music > #musiclist').innerHTML = last5Tracks.map(track => {
+    let image = track.image.find(e => e.size === "large");
+
+    return /*html*/`
+      <div class="track">
+        <a href="${track.url}" class="trackImage">
+          <img src="${image["#text"]}">
+        </a>
+        <div class="text">
+          <h2>${track.name}</h2>
+          <span>${track.artist["#text"]}</span><br>
+          ${track?.date?.uts ? /*html*/`<span class="time">${new Date(track.date.uts * 1000).toLocaleTimeString('de-at', { hour: '2-digit', minute: '2-digit' })}</span>` : ""}
+        </div>
+      </div>
+    `
+  }).join("")
+}
+
+onShowHandlers?.[sections[currentCardIdx].id]?.(true);
+sections[currentCardIdx]?.classList.add('anim');

@@ -237,3 +237,34 @@ p {
   }
 }
 /* #endregion */
+
+/* #region Track List */
+#musiclist {
+  list-style-type: none;
+  margin: 0;
+}
+
+.track {
+  display: flex;
+  padding: 0.4rem;
+}
+.track > .trackImage {
+  height: 128px;
+  flex: 1 0 0%;
+}
+.trackImage > img {
+  height: 128px;
+  align-self: center;
+}
+.track > .text {
+  margin-left: 1rem;
+  flex: 2 0 0%;
+  align-self: center;
+}
+.track > .text > h2 {
+  margin: 0;
+}
+.track > .text > .time {
+  color: rgb(179, 179, 179);
+}
+/* #endregion */

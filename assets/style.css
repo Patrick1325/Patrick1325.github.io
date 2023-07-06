@@ -190,6 +190,10 @@ p {
   background-image: url(/assets/icons/mail.svg);
 }
 
+.mastodon {
+  background-image: url(/assets/icons/brand-mastodon.svg);
+}
+
 .cog {
   animation: spin 1s linear infinite;
   vertical-align: middle;

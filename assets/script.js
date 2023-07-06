@@ -1,9 +1,3 @@
-// Weil SerenityOS und Ladybird interessant sind
-if (navigator.userAgent.includes("Ladybird")) {
-  console.log("👋 hi ladybird user")
-  document.querySelector('.entrycard').style.display = "none";
-}
-
 // Discord detecten und mit URL-Protocol launchen
 // (ich wünschte wir könnten in JS einfach URL-Protocols detecten)
 document.querySelector('.icon.discord').addEventListener('click', e => {

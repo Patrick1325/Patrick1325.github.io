@@ -50,11 +50,20 @@
   }
 }
 
+@keyframes expandWidth {
+  from {
+    width: 0%;
+  } to {
+    width: 100%;
+  }
+}
+
 /* #endregion */
 
 /* #region Base */
 :root {
-  --theme-color: #4690cc;
+  --theme-color: #8464c6;
+  --theme-bg: #15141b;
 }
 
 html,
@@ -63,30 +72,16 @@ body {
   margin: 0;
 }
 body {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  color: #fff;
+  font-family: monospace;
+  color: var(--theme-color);
   font-size: 1.5rem;
   text-shadow: 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black;
-  background: rgb(44, 44, 44);
 }
 
 a:any-link {
-  color: #60a3da;
+  color: var(--theme-color);
   text-decoration: none;
 }
-
-/* Scrollbar */
-::-webkit-scrollbar {
-  width: 15px;
-}
-
-::-webkit-scrollbar-thumb {
-  background-color: rgba(192, 192, 192, 0.11);
-  border-radius: 15px;
-  background-clip: content-box;
-  border: 5px solid transparent;
-}
-
 /* #endregion */
 
 /* #region Cards */
@@ -96,37 +91,29 @@ a:any-link {
   align-items: center;
   height: 100vh;
   width: 100%;
-  background-color: rgb(44, 44, 44);
+  background-color: #15141b;
   flex-direction: column;
   text-align: center;
-}
-
-.card-middle {
-  justify-content: center;
-}
-
-.card-bottom {
-  flex-wrap: wrap;
-  justify-content: flex-end;
 }
 
 .entrycard {
   position: fixed;
   font-size: 2.5rem;
-  animation: disappear 0.5s ease-in-out 1s 1 normal forwards;
+  animation: disappear 0.7s ease-in-out 1s 1 normal forwards;
   flex-direction: row !important;
 
   z-index: 10;
 }
 
-.entrycard > #hi {
+#hi {
   opacity: 0;
   animation: entryTop 0.5s ease-in-out 0.05s 1 normal forwards;
 }
 
-.entrycard > #hi-patrick {
+#hi-patrick {
   animation: entryBottom 0.5s ease-in-out 0.4s 1 normal forwards, expandUnderline 0.3s ease-in-out 0.7s 1 normal forwards;
   opacity: 0;
+  color: var(--theme-color);
 
   /* Für die Underline */
   background-image: linear-gradient(white, white);
@@ -134,16 +121,22 @@ a:any-link {
   background-repeat: no-repeat;
   background-position: 0 100%;
 }
+
+#hi-patrick:before {
+  content: "patrick";
+  position: absolute;
+  top: 0;
+  left: 0;
+  color:white;
+  overflow:hidden;
+  width: 0%;
+  animation: expandWidth 0.3s ease-in-out 0.7s 1 normal forwards;
+}
 /* #endregion */
 
 /* #region Helper */
 .title {
   font-size: 2.5rem;
-  font-weight: 500;
-}
-
-.subtitle {
-  font-size: 2rem;
   font-weight: 500;
 }
 

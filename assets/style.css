@@ -187,9 +187,30 @@ p {
   background-image: url(/assets/icons/brand-mastodon.svg);
 }
 
+.lastfm {
+  background-image: url(/assets/icons/brand-lastfm.svg);
+}
+
 .cog {
   animation: spin 1s linear infinite;
   vertical-align: middle;
   width: 6rem;
+}
+/* #endregion */
+
+/* #region Player */
+#player {
+  position: fixed;
+  bottom: 1em;
+  right: 1em;
+  display: flex;
+  align-items: center;
+  font-size: 0.8em;
+  opacity: 0;
+  transition: 250ms opacity;
+}
+#player.shown {
+  display: flex;
+  opacity: 1;
 }
 /* #endregion */

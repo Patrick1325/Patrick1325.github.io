@@ -1,0 +1,6 @@
+name = "worker"
+main = "src/index.js"
+compatibility_date = "2023-09-22"
+node_compat = true
+
+[env.dev]

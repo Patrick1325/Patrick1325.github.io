@@ -31,7 +31,7 @@ const getUrlFromCobalt = async (url) => { // <3 cobalt
   const img = document.querySelector("#playImg");
   const details = document.querySelector("#songDetails");
   let isPlaying = false;
-  const np = await fetch("https://zimpatrick.gq/_papi/np").then(r => r.json());
+  const np = await fetch("https://patriick.dev/_papi/np").then(r => r.json());
   document.querySelector("#player").classList.add("shown");
   let lastTrackId = np.youtubeId;
   details.innerHTML = `<b>${np.name}</b><br>${np.artist["#text"]}`

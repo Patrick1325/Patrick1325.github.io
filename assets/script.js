@@ -11,7 +11,7 @@ document.querySelector('.icon.discord').addEventListener('click', e => {
 });
 
 const getUrlFromCobalt = async (url) => { // <3 cobalt
-  const data = await fetch("https://co.wuk.sh/api/json", {
+  const data = await fetch("https://api.cobalt.tools/api/json", {
     method: "POST",
     body: JSON.stringify({
       aFormat: "mp3",
@@ -34,7 +34,7 @@ const getUrlFromCobalt = async (url) => { // <3 cobalt
   const np = await fetch("https://patriick.dev/_papi/np").then(r => r.json());
   document.querySelector("#player").classList.add("shown");
   let lastTrackId = np.youtubeId;
-  details.innerHTML = `<b>${np.name}</b><br>${np.artist["#text"]}`
+  details.innerHTML = `<a href="${np.url}" target="_blank" rel="noreferrer"><b>${np.name}</b><br>${np.artist["#text"]}</a>`
   document.querySelector("#playLink").addEventListener('click', async () => {
     isPlaying = !isPlaying;
     if (!isPlaying) {

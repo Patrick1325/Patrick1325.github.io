@@ -183,8 +183,8 @@ p {
   background-image: url(/assets/icons/mail.svg);
 }
 
-.mastodon {
-  background-image: url(/assets/icons/brand-mastodon.svg);
+.bluesky {
+  background-image: url(/assets/icons/brand-bluesky.svg);
 }
 
 .lastfm {
@@ -195,6 +195,22 @@ p {
   animation: spin 1s linear infinite;
   vertical-align: middle;
   width: 6rem;
+}
+
+.tooltip:hover::after {
+  position: absolute;
+  content: attr(title);
+  top: 60%;
+  left: -100%;
+  transform: translateY(50%);
+  user-select: text;
+  opacity: 1;
+}
+
+.tooltip::after {
+  content: "";
+  opacity: 0;
+  transition: 250ms opacity;
 }
 /* #endregion */
 

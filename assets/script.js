@@ -11,11 +11,11 @@ document.querySelector('.icon.discord').addEventListener('click', e => {
 });
 
 const getUrlFromCobalt = async (url) => { // <3 cobalt
-  const data = await fetch("https://api.cobalt.tools/api/json", {
+  const data = await fetch("https://api-cobalt.patriick.dev/", {
     method: "POST",
     body: JSON.stringify({
-      aFormat: "mp3",
-      isAudioOnly: true,
+      audioFormat: "mp3",
+      downloadMode: "audio",
       url
     }),
     headers: {
